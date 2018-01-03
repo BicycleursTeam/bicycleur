@@ -1,0 +1,18 @@
+.entete{
+    height: 100px;
+    width: 100% !important;
+    background-color:rgb(115, 195, 142);
+    color: rgb(69, 71, 70);
+}
+.ensemble{
+    height: 140px;
+}
+.titre{
+    font-size:10px;
+   
+
+}
+.image{
+    float:left;
+   
+}

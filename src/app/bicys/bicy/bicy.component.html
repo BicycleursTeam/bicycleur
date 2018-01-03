@@ -1,0 +1,26 @@
+<div *ngIf="bicyService.selectBicy">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="bicyService.selectBicy.$key">
+    <div class="class-group">
+      <label>Name</label>
+      <input class="form-control" name="name" #name="ngModel" [(ngModel)]="bicyService.selectBicy.name" placeholder="full name"
+        required>
+    </div>
+    <div class="class-group">
+      <label>Lat</label>
+      <input class="form-control" name="lat" #name="ngModel" [(ngModel)]="bicyService.selectBicy.lat" placeholder="lattitude">
+    </div>
+    <div class="class-group">
+      <label>Long</label>
+      <input class="form-control" name="long" #name="ngModel" [(ngModel)]="bicyService.selectBicy.long" placeholder="longitude">
+    </div>
+    <div class="class-group">
+      <button type="submit" class="btn btn-default" [disabled]="!f.valid">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+      <button type="button" class="btn btn-default" *ngIf="bicyService.selectBicy.$key!=null" (click)="onDelete(f)">
+        <i class="fa fa-trash"></i> Delete</button>
+      <button type="button" class="btn btn-default" (click)="resetForm(f)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </form>
+</div>

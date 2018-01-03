@@ -1,0 +1,6 @@
+<ul class="list-group hover">
+  <li class="list-group-item" *ngFor="let bicy of bicyList" (click)="onItemClick(bicy)">
+    {{bicy.name}} - {{bicy.lat}} -  {{bicy.long}}
+
+  </li>
+</ul>
